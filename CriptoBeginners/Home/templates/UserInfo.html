@@ -1,0 +1,35 @@
+{% extends 'rawHtml.html' %}
+
+{% block content %}
+{% csrf_token %}
+<a class="btn btn-secondary btn-sm" href="{% url 'home' %}"><</a>
+<span class="fs-2">User Info</span>
+<hr>
+{% if user.is_authenticated %}
+<div class="container text-center shadow p-4 mb-5 bg-body rounded" style="width: 40%;">
+    
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">{{user.username}}</label>
+            
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">{{user.first_name}}</label>
+            
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">{{user.last_name}}</label>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">{{user.email}}</label>
+        </div>
+
+        <a href="{% url 'logout'%}" class="btn btn-outline-primary">Log Out</a>
+    </form>
+
+</div>
+
+{% endif %}
+
+
+{% endblock content %}

@@ -79,8 +79,8 @@
            
               {% if user.is_authenticated %}
               <form class="d-flex">
-                <a class="nav-link fs-5 m-2" href="#">Walet</a>
-                <a class="nav-link fs-5 m-2" href="#">@{{user.username}}</a>
+                <a class="nav-link fs-5 m-2" href="{% url 'userWalet'%}">Walet</a>
+                <a class="nav-link fs-5 m-2" href="{% url 'userInfo' %}">@{{user.username}}</a>
                 <a class="btn btn-outline-success" href="{% url 'logout' %}">Log out</a>
               </form>
               {% else %}

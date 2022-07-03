@@ -1,0 +1,45 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+{% csrf_token %}
+
+{% if user.is_authenticated %}
+<div class="container shadow p-4 mb-5 bg-body rounded" style="width: 40%;">
+    <form>
+        <div class="mb-3">
+            <label  class="form-label">Total Value(BTC)</label>
+            <label  class="form-label">0.00</label>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label  class="form-label fs-5">Portfolio</label>
+            <hr>
+            
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Earn &nbsp &nbsp 0.00 </label>
+            <hr>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Spot &nbsp &nbsp 0.00 </label>
+            <hr>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Funding &nbsp &nbsp 0.00 </label>
+            <hr>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">T-Option &nbsp &nbsp 0.00 </label>
+            <hr>
+        </div>
+
+        <a href="#" class="btn btn-outline-secondary">Transfer To Another Walet</a>
+       
+    </form>
+
+</div>
+
+{% endif %}
+
+
+{% endblock content %}

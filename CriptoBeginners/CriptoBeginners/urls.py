@@ -23,6 +23,8 @@ urlpatterns = [
     path('login',views.login_user,name="login"),
     path('logout',views.logout_user,name="logout"),
     path('register',views.register,name="register"),
+    path('userInfo',views.UserInfo,name="userInfo"),
+    path('userWalet',views.UserWalet,name="userWalet"),
     path('aboutUs',views.aboutUs),
     path('buyCripto',views.buyCripto),
     path('trade',views.trade),

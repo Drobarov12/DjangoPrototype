@@ -50,6 +50,12 @@ def register(request):
         'form':form,
     })
 
+def UserInfo(request):
+    return render(request,'UserInfo.html',{})
+    
+def UserWalet(request):
+    return render(request,'walet.html',{})
+
 def aboutUs(request):
     return render(request,'aboutUs.html')
 
