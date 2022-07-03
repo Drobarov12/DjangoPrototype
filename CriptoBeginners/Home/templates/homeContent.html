@@ -1,0 +1,42 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+{% csrf_token %}
+    <div class="container">
+        <div class="row" style="margin-top: 30px; height: 570px;">
+            <div class="col" >
+                <div>
+                    <div class="text-center" style="font-size: 32px; margin: 20px; height: 100px;">
+                        Are you ready to begain the cripto market tour and create your perfect portfolio?
+                    </div>
+                    <br>
+                    <br>
+                    <div  class="text-center" style="font-size: 32px; margin: 20px; height: 100px;">
+                        If the answar is YES then you came to the right place !
+                    </div>
+                    <div class="row" style="margin-top: 150px;">
+                        <div class="col-9">
+                            <input type="text" placeholder="Enter your email" style="width: 100%; margin-left: 20px;">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-warning btn-sm">Get started</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center" style="margin-top: 15px;">
+                    <img src="https://media.istockphoto.com/photos/bitcoin-on-white-background-picture-id951412868?k=20&m=951412868&s=170667a&w=0&h=Jp5E1mzB9QpjS4gZtyfXT--aVWct2B2s9HJsQjojiEY=" class="img-fluid" alt="cripto beginners">
+                </div>
+                <div class="text-center" style="font-size: 25px; margin: 20px; ">
+                    Cripto is the future earlier you know earlier you will be delighted
+                </div>
+                <div class="text-end">
+                    <a class="btn btn-warning btn-sm" href="/aboutUs">About us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

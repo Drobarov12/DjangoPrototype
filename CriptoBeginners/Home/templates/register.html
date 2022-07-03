@@ -1,0 +1,25 @@
+{% extends 'rawHtml.html' %}
+
+{% block content %}
+<a class="btn btn-secondary btn-sm" href="/"><</a>
+<span class="fs-2">Register</span>
+<hr>
+
+{% if form.errors%}
+
+<p>Ther was an error with your form</p>
+
+{% endif %}
+
+<div class="container text-center shadow p-4 mb-5 bg-body rounded" style="width: 40%;">
+    <form class="row g-3" action="{% url 'register' %}" method=POST>
+      {% csrf_token %}
+
+      {{form}}
+       
+        <div class="col-12">
+          <input type="submit" class="btn btn-primary" value="Sing in">
+        </div>
+    </form>
+</div>
+{% endblock content %}
