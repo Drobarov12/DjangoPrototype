@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middelware.WhiteNoiseMiddlewere',
+    
 ]
 
 ROOT_URLCONF = 'CriptoBeginners.urls'
